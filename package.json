@@ -1,0 +1,48 @@
+{
+  "name": "women-clothing-single-page-react-aap",
+  "version": "1.0.0",
+  "description": "Women's clothing product page - React Single page app",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build",
+    "build": "webpack -d && copy App\\index.html public\\index.html && webpack-dev-server --content-base App/ --inline --hot",
+    "build:prod": "webpack -p && copy App\\index.html public\\index.html"
+  },
+  "keywords": [
+    "women's Clothing",
+    "react single page app",
+    "react",
+    "react-redux"
+  ],
+  "author": "Neha Luthra",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/runtime": "^7.4.5",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-saga": "^1.0.2",
+    "styled-components": "^4.3.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.5.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.6.0"
+  }
+}

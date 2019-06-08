@@ -5,8 +5,8 @@ export default css`
     display : flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10px;
-    margin: 25px 18px 10px 16px;
+    padding: 10px;
+    margin: 18px 18px;
     background-color: ${ThemeColors.lightBlue};
     .size-filter select {
         width: 170px;

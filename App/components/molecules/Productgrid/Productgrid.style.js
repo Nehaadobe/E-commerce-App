@@ -5,7 +5,7 @@ export default css`
 	border: 1px solid ${ThemeColors.lightGray};
 	list-style: none;
 	display: flex;
-	flex: 1 1 300px;
+	flex: 1 1 285px;
 	margin-left: -1px;
 	margin-top: -1px;
 	flex-wrap: wrap;

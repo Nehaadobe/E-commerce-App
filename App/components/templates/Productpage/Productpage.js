@@ -1,45 +1,35 @@
-import React, { Fragment, PureComponent } from 'react';
-import Productlist from '../../organisms/ProductList/Productlist';
+import React, { Fragment, PureComponent } from 'react'
+import { connect } from "react-redux";
+import { fetchProducts } from "../../../actions/productActions";
 import propTypes from "prop-types";
 import Filter from '../../molecules/Filter/Filter';
-import ServiceURI from "../../../global/services";
+import Productlist from '../../organisms/ProductList/Productlist';
 
-class Productpage extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      productData: [],
-      filterData: []
-    };
-  }
+class Productpage extends PureComponent {  
     componentDidMount() {
-      fetch(ServiceURI.getProductData)
-      .then(response => response.json())
-      .then(data => this.setState({ productData: data }));
-    } 
-
-    filterProductsFromSize(size) {
-      const filterData = this.state.productData.filter(
-        item => item.size.indexOf(size) > -1
-      );
-      this.setState({
-        filterData
-      });
+      this.props.dispatch(fetchProducts());
     }
     
     render() {
-      const { productData, filterData } = this.state;
+      const { error, loading, products, size } = this.props;
+      const filterData = () => ( products.filter(item => item.size.indexOf(size) > -1));
       return (
         <Fragment>
-          <Filter filterProducts={this.filterProductsFromSize.bind(this)} />
-          <Productlist items={filterData.length ? filterData : productData} />
+        <Filter filterProducts={filterData} />
+        <Productlist items={filterData.length ? filterData : products} />
         </Fragment>
       );
     }
   }
 
+  const mapStateToProps = state => ({
+    products: state.products.productData,
+    loading: state.products.loading,
+    error: state.products.error
+  });
+
   Productpage.propTypes = {
     productData: propTypes.array
   };
 
-export default Productpage;
+  export default connect(mapStateToProps)(Productpage);

@@ -3,9 +3,9 @@ import { connect } from "react-redux";
 import { fetchProducts, applyFilter } from "./productActions";
 import propTypes from "prop-types";
 import Filter from "../../molecules/Filter/Filter";
-import Productlist from "../../organisms/ProductList/Productlist";
+import ProductList from "../../organisms/ProductList/ProductList";
 
-class Productpage extends PureComponent {
+class ProductPage extends PureComponent {
   componentDidMount() {
     this.props.getProductData();
   }
@@ -16,7 +16,7 @@ class Productpage extends PureComponent {
       <Fragment>
         <Filter filterProducts={selected => filterProducts(selected)} />
         {isLoading && "loading..."}
-        <Productlist items={filteredData.length ? filteredData : products} />
+        <ProductList items={filteredData.length ? filteredData : products} />
       </Fragment>
     );
   }
@@ -39,11 +39,11 @@ const mapDispatchToState = dispatch => {
   };
 };
 
-Productpage.propTypes = {
+ProductPage.propTypes = {
   productData: propTypes.array
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToState
-)(Productpage);
+)(ProductPage);

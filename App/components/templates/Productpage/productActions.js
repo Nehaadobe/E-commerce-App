@@ -1,4 +1,5 @@
 import serviceURL from "../../../global/services";
+import axios from "axios";
 import {
   FETCH_PRODUCTS_BEGIN,
   FETCH_PRODUCTS_SUCCESS,
@@ -28,13 +29,13 @@ export const fetchProductsFailure = error => ({
 export function fetchProducts() {
   return function(dispatch) {
     dispatch(fetchProductsBegin());
-    return fetch(serviceURL.getProductData)
-      .then(
-        response => response.json(),
-        error => console.log("An error occurred.", error)
-      )
-      .then(json => {
-        dispatch(fetchProductsSuccess(json));
+    return axios
+      .get(serviceURL.getProductData)
+      .then(response => {
+        dispatch(fetchProductsSuccess(response.data));
+      })
+      .catch(error => {
+        throw error;
       });
   };
 }

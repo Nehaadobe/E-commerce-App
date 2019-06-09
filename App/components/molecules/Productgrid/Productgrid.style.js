@@ -6,8 +6,7 @@ export default css`
 	list-style: none;
 	display: flex;
 	flex: 1 1 285px;
-	margin-left: -1px;
-	margin-top: -1px;
+	margin-top: -1px 0 0 -1px;
 	flex-wrap: wrap;
 	padding: 30px 10px;
 	padding-top: 20px;

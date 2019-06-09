@@ -1,7 +1,10 @@
 import serviceURL from '../global/services'
-export const FETCH_PRODUCTS_BEGIN   = 'FETCH_PRODUCTS_BEGIN';
-export const FETCH_PRODUCTS_SUCCESS = 'FETCH_PRODUCTS_SUCCESS';
-export const FETCH_PRODUCTS_FAILURE = 'FETCH_PRODUCTS_FAILURE';
+import {
+  FETCH_PRODUCTS_BEGIN,
+  FETCH_PRODUCTS_SUCCESS,
+  FETCH_PRODUCTS_FAILURE,
+  APPLY_FILTER
+} from '../actions/productContants';
 
 export const fetchProductsBegin = () => ({
   type: FETCH_PRODUCTS_BEGIN
@@ -10,6 +13,11 @@ export const fetchProductsBegin = () => ({
 export const fetchProductsSuccess = products => ({
   type: FETCH_PRODUCTS_SUCCESS,
   payload: { products }
+});
+
+export const applyFilter = filterValue => ({
+  type: APPLY_FILTER,
+  payload: { filterValue }
 });
 
 export const fetchProductsFailure = error => ({

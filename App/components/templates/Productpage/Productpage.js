@@ -1,22 +1,23 @@
 import React, { Fragment, PureComponent } from 'react'
 import { connect } from "react-redux";
-import { fetchProducts } from "../../../actions/productActions";
+import { fetchProducts, applyFilter } from "../../../actions/productActions";
 import propTypes from "prop-types";
 import Filter from '../../molecules/Filter/Filter';
 import Productlist from '../../organisms/ProductList/Productlist';
 
-class Productpage extends PureComponent {  
+class Productpage extends PureComponent { 
+   
     componentDidMount() {
-      this.props.dispatch(fetchProducts());
+      this.props.getProductData();
     }
-    
+
     render() {
-      const { error, loading, products, size } = this.props;
-      const filterData = () => ( products.filter(item => item.size.indexOf(size) > -1));
+      const { isLoading, products, filterProducts, filteredData } = this.props;
       return (
         <Fragment>
-        <Filter filterProducts={filterData} />
-        <Productlist items={filterData.length ? filterData : products} />
+        <Filter filterProducts ={selected => filterProducts(selected)} />
+        {isLoading && 'loading...'}
+        <Productlist items={filteredData.length ? filteredData : products} />
         </Fragment>
       );
     }
@@ -24,12 +25,23 @@ class Productpage extends PureComponent {
 
   const mapStateToProps = state => ({
     products: state.products.productData,
-    loading: state.products.loading,
-    error: state.products.error
+    filteredData: state.products.filteredData,
+    isLoading: state.products.isLoading
   });
+
+  const mapDispatchToState = dispatch => {
+    return ({
+      filterProducts: (selected) => {
+        dispatch(applyFilter(selected))
+      },
+      getProductData: () => {
+        dispatch(fetchProducts())
+      }
+    })
+  }
 
   Productpage.propTypes = {
     productData: propTypes.array
   };
 
-  export default connect(mapStateToProps)(Productpage);
+  export default connect(mapStateToProps, mapDispatchToState)(Productpage);

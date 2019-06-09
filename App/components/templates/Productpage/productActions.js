@@ -1,10 +1,10 @@
-import serviceURL from '../global/services'
+import serviceURL from "../../../global/services";
 import {
   FETCH_PRODUCTS_BEGIN,
   FETCH_PRODUCTS_SUCCESS,
   FETCH_PRODUCTS_FAILURE,
   APPLY_FILTER
-} from '../actions/productContants';
+} from "./productContants";
 
 export const fetchProductsBegin = () => ({
   type: FETCH_PRODUCTS_BEGIN
@@ -26,16 +26,15 @@ export const fetchProductsFailure = error => ({
 });
 
 export function fetchProducts() {
-    return function (dispatch) {
-        dispatch(fetchProductsBegin());
-        return fetch(serviceURL.getProductData)
-        .then(
-            response => response.json(),
-            error => console.log('An error occurred.', error),
-        )
-        .then((json) => {
-            dispatch(fetchProductsSuccess(json));
-        },
-        );
-    };
+  return function(dispatch) {
+    dispatch(fetchProductsBegin());
+    return fetch(serviceURL.getProductData)
+      .then(
+        response => response.json(),
+        error => console.log("An error occurred.", error)
+      )
+      .then(json => {
+        dispatch(fetchProductsSuccess(json));
+      });
+  };
 }

@@ -9,7 +9,6 @@ export default css`
 	margin-top: -1px 0 0 -1px;
 	flex-wrap: wrap;
 	padding: 30px 10px;
-	padding-top: 20px;
 	flex-direction: column;
 	justify-content: space-between;
 	flex-grow: 0;

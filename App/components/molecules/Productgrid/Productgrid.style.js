@@ -1,12 +1,13 @@
-import { css } from "styled-components";
-import themeColor from "Style/theme/colors";
-import themeFont from "Style/typography";
+import { css } from 'styled-components'
+import themeColor from 'Style/theme/colors'
+import themeFont from 'Style/typography'
+
 export default css`
 	border: 0.0625rem solid ${themeColor.lightGray};
 	list-style: none;
 	display: flex;
 	flex: 1 1 17.81rem;
-	margin-top: -0.0625rem 0 0 -0.0625rem;
+	margin: -0.0625rem -0.0625rem  0 -0.0625rem;
 	flex-wrap: wrap;
 	padding: 1.875rem 0.625rem;
 	flex-direction: column;
@@ -42,4 +43,4 @@ export default css`
 		font-size: ${themeFont.productPrice}
 		font-weight: bold;
 	}
-}`;
+}`

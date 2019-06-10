@@ -1,26 +1,24 @@
-import React from "react";
-import Image from "Components/atoms/Image/Image";
-import Label from "Components/atoms/Label/Label";
-import propTypes from "prop-types";
-import ProductGridStyle from "./Productgrid.style";
-import globalStyle from "Global/globalStyle";
-import localVariables from "Global/localVariables";
-import sizeCategories from "Global/sizeCategories";
+import React from 'react'
+import propTypes from 'prop-types'
+import Image from 'Components/atoms/Image/Image'
+import Label from 'Components/atoms/Label/Label'
+import globalStyle from 'Global/globalStyle'
+import localVariables from 'Global/localVariables'
+import sizeCategories from 'Global/sizeCategories'
+import ProductGridStyle from './Productgrid.style'
 
 const Product = props => {
-  const { item, className } = props;
+  const { item, className } = props
   return (
     <li className={className}>
       <Image
         src={`${sizeCategories.staticPath}${item.productImage}`}
-        alt={item.productName}
-      />
+        alt={item.productName} />
       <div>
         {item.isExclusive && (
           <Label
             className="exclusive-tag"
-            tagLabel={localVariables.exclusive}
-          />
+            tagLabel={localVariables.exclusive} />
         )}
         {item.isSale && (
           <Label className="sale-tag" tagLabel={localVariables.sale} />
@@ -31,8 +29,8 @@ const Product = props => {
         </div>
       </div>
     </li>
-  );
-};
+  )
+}
 
 Product.propTypes = {
   item: propTypes.shape({
@@ -45,6 +43,6 @@ Product.propTypes = {
     size: propTypes.array.isRequired
   }),
   className: propTypes.string
-};
+}
 
-export default globalStyle(Product, ProductGridStyle);
+export default globalStyle(Product, ProductGridStyle)

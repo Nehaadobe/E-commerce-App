@@ -14,13 +14,15 @@ var config = {
   module: {
     rules: [
       {
-        test: /\.js?/,
-        include: SRC_DIR,
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
         loader: 'babel-loader',
-        options: {
-          cacheDirectory: true, // To improve performance by caching compiled files.
-          presets: ['@babel/react'],
-        },
       },
     ],
   },

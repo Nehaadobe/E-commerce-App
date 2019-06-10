@@ -1,29 +1,29 @@
 export default {
-  staticPath: "/static/",
+  staticPath: '/static/',
   productSizeCategories: [
     {
-      label: "Filter By Size",
-      value: "Filter By Size"
+      label: 'Filter By Size',
+      value: 'Filter By Size'
     },
     {
-      label: "XS",
-      value: "XS"
+      label: 'XS',
+      value: 'XS'
     },
     {
-      label: "S",
-      value: "S"
+      label: 'S',
+      value: 'S'
     },
     {
-      label: "M",
-      value: "M"
+      label: 'M',
+      value: 'M'
     },
     {
-      label: "L",
-      value: "L"
+      label: 'L',
+      value: 'L'
     },
     {
-      label: "XL",
-      value: "XL"
+      label: 'XL',
+      value: 'XL'
     }
   ]
-};
+}

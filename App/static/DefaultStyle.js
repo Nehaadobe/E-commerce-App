@@ -1,4 +1,5 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
+
 export const DefaultStyle = createGlobalStyle`
 
 html, body, div, span, applet, object, iframe,
@@ -73,4 +74,4 @@ body {
     margin: 0 auto;
     color:#333333;
 }
-`;
+`

@@ -1,6 +1,6 @@
 {
   "parser": "babel-eslint",
-  "plugins": ["react", "jest", "prettier", "jsx-a11y"],
+  "plugins": ["react", "prettier", "jsx-a11y"],
   "extends": [
     "airbnb",
     "eslint:recommended",
@@ -11,8 +11,6 @@
     "React": true,
     "document": true,
     "window": true,
-    "dataLayer": true,
-    "cy": true,
     "localStorage": true,
     "fetch": true
   },
@@ -20,6 +18,22 @@
   "rules": {
     "indent": ["error", 2],
     "semi": [2, "never"],
+    "react/prop-types": [
+      "off",
+      { "ignore": ["ignore"], "customValidators": ["customValidator"] }
+    ],
+    "react/no-unused-prop-types": [
+      "off", 
+      { "customValidators": ["customValidator"], "skipShapeProps": false }
+    ],
+    "react/default-props-match-prop-types": [
+      "off", 
+      { "allowRequiredDefaults": false }
+    ],
+    "no-unused-vars": [
+      "off", 
+      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+    ],
     "react/prefer-stateless-function": "warn",
     "react/self-closing-comp": [
       "warn",
@@ -42,11 +56,6 @@
         }
       }
     ],
-    "jest/no-disabled-tests": "warn",
-    "jest/no-focused-tests": "error",
-    "jest/no-identical-title": "error",
-    "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "error",
     "react/require-default-props": 0,
     "object-shorthand": [1, "properties"],
     "max-len": 0,
@@ -72,6 +81,7 @@
       }
     ],
     "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/no-onchange": "off",
     "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
     "jsx-a11y/label-has-for": [
       2,
@@ -97,7 +107,6 @@
   },
   "env": {
     "es6": true,
-    "jest": true,
     "browser": true,
     "node": true
   }

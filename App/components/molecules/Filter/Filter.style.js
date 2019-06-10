@@ -1,5 +1,5 @@
-import { css } from "styled-components";
-import themeColor from "Style/theme/colors";
+import { css } from 'styled-components'
+import themeColor from 'Style/theme/colors'
 
 export default css`
   display: flex;
@@ -12,4 +12,4 @@ export default css`
     width: 100%;
     font-size: 0.875rem;
   }
-`;
+`

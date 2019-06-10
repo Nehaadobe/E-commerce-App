@@ -14,32 +14,32 @@ export default css`
 	justify-content: space-between;
 	flex-grow: 0;
 	
-	.sale-tag{
+	.sale__tag{
 		background-color: ${themeColor.red};
 		color: ${themeColor.white};
 		padding: 1rem 1.313rem;
 		display: inline-block;
 	}
 	
-	.exclusive-tag{
+	.exclusive__tag{
 		background-color:${themeColor.green};
 		color: ${themeColor.white};
 		padding: 1rem 2.188rem;
 		display: inline-block;
 	}
 
-	.product-description{
+	.product__description{
 		display: flex;
 		justify-content: space-between;
 		margin-top: 1.875rem;
 		align-items: baseline;
 	}
-	.product-name{
+	.product__name{
 		font-size: ${themeFont.productTitle}
 		max-width: 10.63rem;
 		font-weight: bold;
 	}
-	.product-price {
+	.product__price {
 		font-size: ${themeFont.productPrice}
 		font-weight: bold;
 	}

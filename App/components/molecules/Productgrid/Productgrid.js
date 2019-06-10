@@ -17,15 +17,15 @@ const Product = props => {
       <div>
         {item.isExclusive && (
           <Label
-            className="exclusive-tag"
+            className="exclusive__tag"
             tagLabel={localVariables.exclusive} />
         )}
         {item.isSale && (
-          <Label className="sale-tag" tagLabel={localVariables.sale} />
+          <Label className="sale__tag" tagLabel={localVariables.sale} />
         )}
-        <div className="product-description">
-          <div className="product-name">{item.productName}</div>
-          <div className="product-price">{item.price}</div>
+        <div className="product__description">
+          <div className="product__name">{item.productName}</div>
+          <div className="product__price">{item.price}</div>
         </div>
       </div>
     </li>

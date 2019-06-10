@@ -14,7 +14,7 @@ const Filter = props => {
       <Dropdown
         options={sizeCategories.productSizeCategories}
         onSelect={selected => filterProducts(selected)}
-        className="size-filter" />
+        className="size__filter" />
     </div>
   )
 }

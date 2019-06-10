@@ -8,7 +8,7 @@ export default css`
   padding: 0.625rem;
   margin: 1.125rem;
   background-color: ${themeColor.lightBlue};
-  .size-filter select {
+  .size__filter select {
     width: 100%;
     font-size: 0.875rem;
   }

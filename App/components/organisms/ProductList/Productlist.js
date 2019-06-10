@@ -1,5 +1,5 @@
 import React from "react";
-import Productgrid from "../../molecules/Productgrid/Productgrid";
+import Productgrid from "Components/molecules/Productgrid/Productgrid";
 import ProductListStyle from "./ProductList.style";
 import propTypes from "prop-types";
 

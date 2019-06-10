@@ -2,8 +2,8 @@ import React, { Fragment, PureComponent } from "react";
 import { connect } from "react-redux";
 import { fetchProducts, applyFilter } from "./productActions";
 import propTypes from "prop-types";
-import Filter from "../../molecules/Filter/Filter";
-import ProductList from "../../organisms/ProductList/ProductList";
+import Filter from "Components/molecules/Filter/Filter";
+import ProductList from "Components/organisms/ProductList/ProductList";
 
 class ProductPage extends PureComponent {
   componentDidMount() {

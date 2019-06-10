@@ -4,6 +4,6 @@ export default styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0px;
-  margin: 10px 0 20px 0;
+  padding: 0rem;
+  margin: 0.625rem 0 1.25rem 0;
 `;

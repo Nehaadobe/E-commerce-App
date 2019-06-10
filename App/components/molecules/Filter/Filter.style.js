@@ -1,15 +1,15 @@
-import { css } from 'styled-components';
-import ThemeColors from '../../../style/theme/colors';
+import { css } from "styled-components";
+import themeColor from "Style/theme/colors";
 
 export default css`
-    display : flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    margin: 18px;
-    background-color: ${ThemeColors.lightBlue};
-    .size-filter select {
-        width: 170px;
-        font-size: 0.875em;
-    }
-`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem;
+  margin: 1.125rem;
+  background-color: ${themeColor.lightBlue};
+  .size-filter select {
+    width: 100%;
+    font-size: 0.875rem;
+  }
+`;

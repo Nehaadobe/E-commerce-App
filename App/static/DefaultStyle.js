@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 export const DefaultStyle = createGlobalStyle`
 
 html, body, div, span, applet, object, iframe,
@@ -48,9 +48,9 @@ ul {
     padding: 0;
     margin: 0;
 }
-h2 {
+h1 {
     display: block;
-    font-size: 1.5em;
+    font-size: 2rem;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 0;
@@ -59,17 +59,18 @@ h2 {
 }
 .sr-only {
     position: absolute;
-    width: 1px;
-    height: 1px;
+    width: 0.0625rem;
+    height: 0.0625rem;
     padding: 0;
-    margin: -1px;
+    margin: -0.0625rem;
     overflow: hidden;
     clip: rect(0,0,0,0);
     border: 0;
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
-    max-width: 1320px;
+    max-width: 82.5rem;
     margin: 0 auto;
     color:#333333;
-}`
+}
+`;

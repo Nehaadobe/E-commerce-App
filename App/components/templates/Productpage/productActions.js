@@ -1,4 +1,4 @@
-import serviceURL from "../../../global/services";
+import serviceURL from "Global/services";
 import axios from "axios";
 import {
   FETCH_PRODUCTS_BEGIN,

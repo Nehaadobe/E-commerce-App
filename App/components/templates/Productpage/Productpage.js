@@ -4,6 +4,8 @@ import propTypes from 'prop-types'
 import Filter from 'Components/molecules/Filter/Filter'
 import ProductList from 'Components/organisms/ProductList/ProductList'
 import Spinner from 'Components/molecules/Spinner/Spinner'
+import { ErrorBoundary } from 'Global/ErrorBoundary'
+import localVariables from 'Global/localVariables'
 import { fetchProducts, applyFilter } from './productActions'
 
 class ProductPage extends PureComponent {
@@ -14,9 +16,13 @@ class ProductPage extends PureComponent {
     const { isLoading, products, filterProducts, filteredData } = this.props
     return (
       <Fragment>
-        <Filter filterProducts={selected => filterProducts(selected)} />
+        <ErrorBoundary erroMessage={localVariables.setFilterFailureError}>
+          <Filter filterProducts={selected => filterProducts(selected)} />
+        </ErrorBoundary>
         {isLoading && <Spinner loading={isLoading} />}
-        <ProductList items={filteredData.length ? filteredData : products} />
+        <ErrorBoundary erroMessage={localVariables.setProductFailureError}>
+          <ProductList items={filteredData.length ? filteredData : products} />
+        </ErrorBoundary>
       </Fragment>
     )
   }

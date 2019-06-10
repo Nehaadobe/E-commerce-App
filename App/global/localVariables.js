@@ -1,7 +1,9 @@
-const locale = {
+const localVariables = {
   title: "Women's Top",
   filterLabel: 'Filter By Size',
   sale: 'Sale',
-  exclusive: 'Exclusive'
+  exclusive: 'Exclusive',
+  setFilterFailureError: 'Failed while Loading Filter Component',
+  setProductFailureError: 'Failed while Loading Products Component'
 }
-export default locale
+export default localVariables

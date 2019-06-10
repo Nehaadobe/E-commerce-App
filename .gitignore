@@ -1,2 +1,19 @@
+# Cruft
+*~
+*#
+.#*
+.DS_Store
+
+# npm & yarn
 node_modules/
-public/
+.npm
+.yarn-integrity
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock*
+package-lock.json
+/public/bundle.js
+/public/index.html
+/public*
+/public/*

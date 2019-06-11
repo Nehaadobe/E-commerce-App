@@ -1,7 +1,7 @@
 const webpack = require('webpack')
 const path = require('path')
 
-const DIST_DIR = path.resolve(__dirname, 'public')
+const DIST_DIR = path.resolve(__dirname, 'build')
 const SRC_DIR = path.resolve(__dirname, 'App')
 
 const config = {

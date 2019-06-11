@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build",
-    "build": "webpack -d && copy App\\index.html public\\index.html && webpack-dev-server --content-base App/ --inline --hot",
-    "build:prod": "webpack -p && copy App\\index.html public\\index.html"
+    "build": "webpack -d && webpack-dev-server --content-base App/ --inline --hot",
+    "build:prod": "webpack -p"
   },
   "keywords": [
     "women's Clothing",

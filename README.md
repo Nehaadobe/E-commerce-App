@@ -6,10 +6,10 @@ The objective of this application is to develop an e-commerce product listing pa
 ```
 Following software’s are required to run the application:   
 
-- Node Js (>= v8.12.0)   
-- NPM (>=6.4.1)   
-- git (>=2.15.2)   
-- yarn (>=1.12.3)   
+- Node Js   
+- NPM  
+- git  
+- yarn 
 ```
 
 **Installing**
@@ -36,6 +36,15 @@ Axios (https://github.com/axios/axios)
 ```
 
 ├── App
+│   ├── assets
+│   │   ├── product-1.jpg
+│   │   ├── product-2.jpg
+│   │   ├── product-3.jpg
+│   │   ├── product-4.jpg
+│   │   ├── product-5.jpg
+│   │   ├── product-6.jpg
+│   │   ├── product-7.jpg
+│   │   ├── product-8.jpg
 │   ├── components
 │   │   ├── atoms
 │   │   │   ├── Dropdown
@@ -70,38 +79,27 @@ Axios (https://github.com/axios/axios)
 │   │   ├── localVariables.js
 │   │   ├── services.js
 │   │   └── sizeCategories.js
-│   ├── index.html
-│   ├── index.js
+│   ├── images
+│   │   ├── index.js
 │   ├── reducer
 │   │   └── rootReducer.js
 │   ├── static
 │   │   ├── DefaultStyle.js
-│   │   ├── product-1.jpg
-│   │   ├── product-2.jpg
-│   │   ├── product-3.jpg
-│   │   ├── product-4.jpg
-│   │   ├── product-5.jpg
-│   │   ├── product-6.jpg
-│   │   ├── product-7.jpg
-│   │   ├── product-8.jpg
 │   │   └── product.json
 │   ├── store
 │   │   └── store.js
-│   └── style
-│       ├── theme
-│       │   └── colors.js
-│       └── typography.js
+│   ├── style
+│   │    ├── theme
+│   │    │   └── colors.js
+│   │    └── typography.js
+│   ├── index.html
+│   ├── index.js
 ├── README.md
 ├── node_modules
 ├── package-lock.json
 ├── package.json
-├── public
-│   └── app
-│       └── bundle.js
-├── task
-│   ├── Code-Test.jpg
-│   ├── Code-Test.psd
-│   ├── Products
+├── buils
+│   ├── images
 │   │   ├── product-1.jpg
 │   │   ├── product-2.jpg
 │   │   ├── product-3.jpg
@@ -110,8 +108,8 @@ Axios (https://github.com/axios/axios)
 │   │   ├── product-6.jpg
 │   │   ├── product-7.jpg
 │   │   └── product-8.jpg
-│   ├── instructions.txt
-│   └── products.json
+│   ├── bundle.js
+│   ├── index.html|
 ├── webpack.config.js
 └── yarn.lock
 ```
@@ -138,7 +136,7 @@ A JavaScript library for building user interfaces. There are several benefits of
 
 8. It is focused and easy-to-learn.
 
-9. It is backed by a strong community.
+9. It is backed by a strong community called Facebook.
 ```
 
 ### Redux & Redux Thunk
@@ -221,11 +219,7 @@ const Subtitle = styled.h2`
 
 **4. Scoped styles**
 
-**5. Client-side rendering**
-
-**6. No-class policy**
-
-**7. Sass and polished support**
+**5. Server-side rendering**
 
 
 

@@ -7,6 +7,12 @@ import localVariables from 'Global/localVariables'
 import sizeCategories from 'Global/sizeCategories'
 import ProductGridStyle from './Productgrid.style'
 
+/**
+ * @desc Product Grid component is used to display a Product. This component is connected with Styled component
+ *  to add and modify inline styles.
+ *  @item : Item object contain information regarding the Price, Product Name, Product Type
+ */
+
 const Product = props => {
   const { item, className } = props
   return (

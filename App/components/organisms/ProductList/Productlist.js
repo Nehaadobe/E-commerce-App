@@ -3,6 +3,12 @@ import propTypes from 'prop-types'
 import Productgrid from 'Components/molecules/Productgrid/Productgrid'
 import ProductListStyle from './ProductList.style'
 
+/**
+ * @desc ProductList component is used to display a listy of Products. This component is connected with Styled component
+ *  to add and modify inline styles.
+ *  @items : Items object contain array of object of prices, productNames and productType
+ */
+
 const ProductList = props => {
   const { items, className } = props
   return (

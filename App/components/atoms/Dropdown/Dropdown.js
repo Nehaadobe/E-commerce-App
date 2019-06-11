@@ -2,6 +2,13 @@ import React, { PureComponent } from 'react'
 import globalStyle from 'Global/globalStyle'
 import propTypes from 'prop-types'
 
+/**
+ * @desc Dropdown component is used to display form element of Select box options. This component is connected with Styled component
+ *  to add and modify inline styles.
+ *  @options : options is mandatory props object which expect an array of object
+ *  example : options = [{label:"size-1", value: "1"}]
+ */
+
 class Dropdown extends PureComponent {
   static defaultProps = {
     className: '',

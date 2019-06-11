@@ -35,6 +35,9 @@ const config = {
       Store: path.resolve(__dirname, 'App/store/'),
       Style: path.resolve(__dirname, 'App/style/')
     }
+  },
+  performance: {
+    hints: false
   }
 }
 module.exports = config

@@ -6,7 +6,10 @@
   "scripts": {
     "start": "npm run build",
     "build": "webpack -d && webpack-dev-server --content-base App/ --inline --hot",
-    "build:prod": "webpack -p"
+    "build:prod": "webpack -p",
+    "lint": "eslint --ignore-path .gitignore .",
+    "precommit": "npm run lint && npm test",
+    "prepush": "npm run lint"
   },
   "keywords": [
     "women's Clothing",

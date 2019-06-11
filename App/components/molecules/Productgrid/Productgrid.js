@@ -4,7 +4,6 @@ import Image from 'Components/atoms/Image/Image'
 import Label from 'Components/atoms/Label/Label'
 import globalStyle from 'Global/globalStyle'
 import localVariables from 'Global/localVariables'
-import sizeCategories from 'Global/sizeCategories'
 import ProductGridStyle from './Productgrid.style'
 
 /**
@@ -17,9 +16,7 @@ const Product = props => {
   const { item, className } = props
   return (
     <li className={className}>
-      <Image
-        src={`${sizeCategories.staticPath}${item.productImage}`}
-        alt={item.productName} />
+      <Image src={`./images/${item.productImage}`} alt={item.productName} />
       <div>
         {item.isExclusive && (
           <Label

@@ -1,6 +1,5 @@
 const webpack = require('webpack')
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 
 const DIST_DIR = path.resolve(__dirname, 'build')
@@ -9,24 +8,13 @@ const SRC_DIR = path.resolve(__dirname, 'App')
 const config = {
   entry: SRC_DIR + '/index.js',
   output: {
-    path: DIST_DIR + '/app',
+    path: DIST_DIR + '/',
     filename: 'bundle.js',
-    publicPath: '/app'
+    publicPath: '/'
   },
 
   module: {
     rules: [
-      {
-        test: /\.(png|jpg|gif)$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192
-            }
-          }
-        ]
-      },
       {
         enforce: 'pre',
         test: /\.js$/,
@@ -37,6 +25,19 @@ const config = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: './images/',
+              publicPath: './images/',
+              name: '[name].[ext]'
+            }
+          }
+        ]
       }
     ]
   },
@@ -55,11 +56,6 @@ const config = {
   },
   plugins: [
     new CopyPlugin([
-      {
-        from: './App/images',
-        to: './images',
-        toType: 'dir'
-      },
       {
         from: './App/index.html',
         to: './'

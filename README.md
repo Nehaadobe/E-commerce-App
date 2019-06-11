@@ -17,7 +17,7 @@ Following software’s are required to run the application:
 - git clone https://github.com/Nehaadobe/E-commerce-App/tree/master
 - cd E-commerce-App
 - yarn install or npm install
-- yarn run dev or npm start
+- yarn start or npm start
 - open url http://localhost:8080
 ```
 
@@ -140,7 +140,7 @@ const Subtitle = styled.h2`
 
 **4. Scoped styles**
 
-**5. Server-side rendering**
+**5. Client-side rendering**
 
 **6. No-class policy**
 

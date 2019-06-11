@@ -1,5 +1,5 @@
 export default {
-  staticPath: '/static/',
+  staticPath: '/images/',
   productSizeCategories: [
     {
       label: 'Filter By Size',

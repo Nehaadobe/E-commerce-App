@@ -1,5 +1,7 @@
 const webpack = require('webpack')
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 const DIST_DIR = path.resolve(__dirname, 'build')
 const SRC_DIR = path.resolve(__dirname, 'App')
@@ -11,8 +13,20 @@ const config = {
     filename: 'bundle.js',
     publicPath: '/app'
   },
+
   module: {
     rules: [
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
+      },
       {
         enforce: 'pre',
         test: /\.js$/,
@@ -38,6 +52,19 @@ const config = {
   },
   performance: {
     hints: false
-  }
+  },
+  plugins: [
+    new CopyPlugin([
+      {
+        from: './App/images',
+        to: './images',
+        toType: 'dir'
+      },
+      {
+        from: './App/index.html',
+        to: './'
+      }
+    ])
+  ]
 }
 module.exports = config

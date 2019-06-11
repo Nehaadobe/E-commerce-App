@@ -1,11 +1,11 @@
-The objective of this application is to develop an e-commerce product listing page where products can be filter based on the sizes of apparel.
+# E-Commerce Women's Product Page
+
+The objective of this application is to develop an e-commerce product page where products can be filter based on user selection from sizes dropdown.
 
 ## Getting Started
 
 **Prerequisites**
 ```
-Following software’s are required to run the application:   
-
 - Node Js   
 - NPM  
 - git  
@@ -212,18 +212,3 @@ const Subtitle = styled.h2`
 `;
 <Subtitle>Gucci Snakes</Subtitle>
 ```
-
-**2. Inline styling on steroids**
-
-**3. Native mobile support**
-
-**4. Scoped styles**
-
-**5. Server-side rendering**
-
-
-
-
-
-
-

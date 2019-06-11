@@ -51,6 +51,8 @@ class Dropdown extends PureComponent {
 }
 Dropdown.propTypes = {
   options: propTypes.instanceOf(Array).isRequired,
-  className: propTypes.string
+  className: propTypes.string,
+  selected: propTypes.string,
+  onSelect: propTypes.func
 }
 export default globalStyle(Dropdown)

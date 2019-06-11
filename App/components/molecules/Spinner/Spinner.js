@@ -1,13 +1,11 @@
 import React from 'react'
 import { RingLoader } from 'react-spinners'
-import globalStyle from 'Global/globalStyle'
 import SpinnerStyle from './Spinner.style'
 
-const Spinner = props => {
-  const { isLoading } = props
+const Spinner = () => {
   return (
     <SpinnerStyle>
-      <RingLoader size={50} color="#123abc" loading={isLoading} />
+      <RingLoader size={50} color="#123abc" />
     </SpinnerStyle>
   )
 }

@@ -33,7 +33,88 @@ Axios (https://github.com/axios/axios)
 
 ## Architecture
 
+```
 
+├── App
+│   ├── components
+│   │   ├── atoms
+│   │   │   ├── Dropdown
+│   │   │   │   └── Dropdown.js
+│   │   │   ├── Image
+│   │   │   │   └── Image.js
+│   │   │   └── Label
+│   │   │       └── Label.js
+│   │   ├── molecules
+│   │   │   ├── Filter
+│   │   │   │   ├── Filter.js
+│   │   │   │   └── Filter.style.js
+│   │   │   ├── Productgrid
+│   │   │   │   ├── Productgrid.js
+│   │   │   │   └── Productgrid.style.js
+│   │   │   └── Spinner
+│   │   │       ├── Spinner.js
+│   │   │       └── Spinner.style.js
+│   │   ├── organisms
+│   │   │   └── ProductList
+│   │   │       ├── ProductList.style.js
+│   │   │       └── Productlist.js
+│   │   └── templates
+│   │       └── Productpage
+│   │           ├── Productpage.js
+│   │           ├── productActions.js
+│   │           ├── productContants.js
+│   │           └── productReducer.js
+│   ├── global
+│   │   ├── ErrorBoundary.js
+│   │   ├── globalStyle.js
+│   │   ├── localVariables.js
+│   │   ├── services.js
+│   │   └── sizeCategories.js
+│   ├── index.html
+│   ├── index.js
+│   ├── reducer
+│   │   └── rootReducer.js
+│   ├── static
+│   │   ├── DefaultStyle.js
+│   │   ├── product-1.jpg
+│   │   ├── product-2.jpg
+│   │   ├── product-3.jpg
+│   │   ├── product-4.jpg
+│   │   ├── product-5.jpg
+│   │   ├── product-6.jpg
+│   │   ├── product-7.jpg
+│   │   ├── product-8.jpg
+│   │   └── product.json
+│   ├── store
+│   │   └── store.js
+│   └── style
+│       ├── theme
+│       │   └── colors.js
+│       └── typography.js
+├── README.md
+├── node_modules
+├── package-lock.json
+├── package.json
+├── public
+│   └── app
+│       └── bundle.js
+├── task
+│   ├── Code-Test.jpg
+│   ├── Code-Test.psd
+│   ├── Products
+│   │   ├── product-1.jpg
+│   │   ├── product-2.jpg
+│   │   ├── product-3.jpg
+│   │   ├── product-4.jpg
+│   │   ├── product-5.jpg
+│   │   ├── product-6.jpg
+│   │   ├── product-7.jpg
+│   │   └── product-8.jpg
+│   ├── instructions.txt
+│   └── products.json
+├── webpack.config.js
+└── yarn.lock
+```
 
 
 

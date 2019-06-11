@@ -40,13 +40,13 @@ const Product = props => {
 
 Product.propTypes = {
   item: propTypes.shape({
-    index: propTypes.number.isRequired,
-    isSale: propTypes.bool.isRequired,
-    isExclusive: propTypes.bool.isRequired,
-    price: propTypes.string.isRequired,
-    productImage: propTypes.string.isRequired,
-    productName: propTypes.string.isRequired,
-    size: propTypes.array.isRequired
+    //index: propTypes.number.isRequired,
+    //isSale: propTypes.bool.isRequired,
+    //isExclusive: propTypes.bool.isRequired,
+    //price: propTypes.string.isRequired,
+    //productImage: propTypes.string.isRequired,
+    //productName: propTypes.string.isRequired,
+    //size: propTypes.array.isRequired
   }),
   className: propTypes.string
 }

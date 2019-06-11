@@ -6,7 +6,9 @@
   "scripts": {
     "start": "npm run build",
     "build": "webpack -d && webpack-dev-server --content-base App/ --inline --hot",
-    "build:prod": "webpack -p"
+    "build:prod": "webpack -p",
+    "precommit": "npm test",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "keywords": [
     "women's Clothing",
@@ -44,6 +46,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.13.0",
+    "husky": "^2.4.0",
     "stylelint-config-recommended": "^2.2.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.8.0",

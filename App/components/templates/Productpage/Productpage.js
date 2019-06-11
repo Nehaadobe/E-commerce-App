@@ -27,7 +27,7 @@ class ProductPage extends PureComponent {
         <ErrorBoundary erroMessage={localVariables.setFilterFailureError}>
           <Filter filterProducts={selected => filterProducts(selected)} />
         </ErrorBoundary>
-        {isLoading && <Spinner loading={isLoading} />}
+        {isLoading && <Spinner />}
         <ErrorBoundary erroMessage={localVariables.setProductFailureError}>
           <ProductList items={filteredData.length ? filteredData : products} />
         </ErrorBoundary>
@@ -54,7 +54,12 @@ const mapDispatchToState = dispatch => {
 }
 
 ProductPage.propTypes = {
-  productData: propTypes.instanceOf(Array)
+  //productData: propTypes.instanceOf(Array),
+  getProductData: propTypes.func,
+  isLoading: propTypes.bool,
+  products: propTypes.instanceOf(Array),
+  filterProducts: propTypes.func,
+  filteredData: propTypes.instanceOf(Array)
 }
 
 export default connect(
